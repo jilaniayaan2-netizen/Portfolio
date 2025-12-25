@@ -25,7 +25,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px;
+        }
+
+        ul.myUL {
+            display: inline-block;
+            text-align: left;
         }
     </style>
 </head>
@@ -41,9 +45,10 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#recreational-hobbies">Recreational Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Technical Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#creative-hobbies">Creative Hobbies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recreational-hobbies">Recreational Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <button class="btn btn-sm btn-outline-secondary" id="themeToggle">Dark/Light</button>
@@ -51,27 +56,24 @@
         </div>
     </nav>
     <div class="card text-bg-dark mb-3 text-center">
-        <h1>I'm Ayaan, nice to meet you!</h1>
+        <h1>Hi, I'm Ayaan, a Technology Enthusiast</h1>
         <h5 class="lead">C# Developer | Unity Game Programmer | Python Enthusiast</h5>
+        <h5>
+            GitHub: <a href="https://github.com/jilaniayaan2-netizen">Link</a> |
+            Itch.io: <a href="https://rainy-studios.itch.io/">Link</a>
+        </h5>
     </div>
 
     <section id="about" class="text-center mb-5">
         <h2>About Me</h2>
         <h5>
             I’m a developer passionate about using technology to tell stories and solve problems. My
-            favorite uses of tech lies in how technology can be used to express one’s creativity.
-        </h5>
-        <h5>
-            When I was younger, my parents placed me into a class for robotics, these classes were
-            something I enjoyed, using simple robotics concepts to solve challenges. Then Covid-19 hit, I couldn’t go to
-            these
-            classes anymore since they were in person, that led me to taking classes in software development. These
-            beginner
-            level coding classes led me to taking a course for Unity, where I learned to make my own games. This is what
-            triggered my love for software development. Since then, I’ve taken a Python course and an AI developer
-            course. Other
-            than taking courses, I’ve pursued learning on my own, like making my own old internet style website using
-            html.
+            favorite uses of technology lies in how technology can be used to solve real world problems and automate
+            tasks. I started taking Robotics Classes ever since I was in grade 4, during the last few years, my passion
+            for
+            technology has grown and I have gained experiance in Robotics, Automation, Game Development, and Application
+            Development. I've gain expertise in using languages like Python, Java, HTML, and C# along with learning how
+            to use tools such as Unity, Bootstrap, Jupyter Notebook, and Flask.
         </h5>
     </section>
 
@@ -87,7 +89,8 @@
                         <h5 class="card-text">Ant Escape is a top down game, similar to a dungeon crawler. You play as
                             Fred, an ant who got separated from his colony. To get back to his colony, he has to
                             complete over 10 levels filled with enemies and even defeat a boss.</h5>
-                        <a href="https://github.com/jilaniayaan2-netizen" class="btn btn-dark btn-sm">View GitHub</a>
+                        <a href="https://github.com/jilaniayaan2-netizen/Ant-Escape" class="btn btn-dark btn-sm">View
+                            GitHub</a>
                         <a href="https://rainy-studios.itch.io/ant-escape" class="btn"
                             style="background-color: #fa5c5c; color: white;">View Itch.io</a>
                     </div>
@@ -129,6 +132,86 @@
         </div>
     </section>
 
+    <section id="skills" class="text-center mb-5">
+        <h2>Technical Skills</h2>
+        <div class="row justify-content-center">
+            <div class="row" style="padding-top: 25px;">
+                <div class="col">
+                    <div class="phrog" style="transform: translateX(50px);">
+                        <img src="static/cSharp.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="phrog" style="transform: translateX(50px);">
+                        <img src="static/python.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="phrog" style="transform: translateX(50px);">
+                        <img src="static/html.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="phrog" style="transform: translateX(50px);">
+                        <img src="static/java.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 25px;">
+                <div class="col">
+                    <div class="phrog" style="transform: translateX(50px);">
+                        <img src="static/unity.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="phrog" style="transform: translateX(50px);">
+                        <img src="static/Bootstrap.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="phrog" style="transform: translateX(50px);">
+                        <img src="static/Flask.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="phrog" style="transform: translateX(50px);">
+                        <img src="static/Jupyter_logo.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="creative-hobbies" class="text-center mb-5">
+        <h2>Creative Hobbies</h2>
+        <h3 style="text-align: left;">Storytelling/writing</h3>
+        <ul>
+            <h5 style="text-align: left;">
+                <li>I like to write stories and share them with my group of friends</li>
+            </h5>
+        </ul>
+        <h3 style="text-align: left;">Clay Sculpting</h3>
+        <ul>
+            <h5 style="text-align: left;">
+                <li>I like sculpting figurines for my desk, I take inspiration from my imagination and tv shows</li>
+            </h5>
+        </ul>
+        <div class="row justify-content-center">
+            <div class="col">
+                <img src="static/mimic.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col">
+                <img src="static/mahoraga.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col">
+                <img src="static/biolante.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col">
+                <img src="static/demogorgan.jpg" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
     <section id="recreational-hobbies" class="text-center mb-5">
         <h2>Recreational Hobbies</h2>
         <h5>
@@ -139,67 +222,36 @@
         </h5>
     </section>
 
-    <section id="creative-hobbies" class="text-center mb-5">
-        <h2>Creative Hobbies</h2>
-        <h5>
-            I also love to spend my time in creating things and expressing my creativity through
-            different mediums. My hobbies that I use to express my creativity is sculpting and writing. Below are my 3
-            favorite sculptures that I've made.
-        </h5>
-        <div class="row justify-content-center">
-            <div class="col-4 mb-3">
-                <img src="static/mimic.jpg" class="img-fluid rounded">
-            </div>
-            <div class="col-4 mb-3">
-                <img src="static/mahoraga.jpg" class="img-fluid rounded">
-            </div>
-            <div class="col-4 mb-3">
-                <img src="static/godzilla.jpg" class="img-fluid rounded">
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="text-center mb-5">
-        <h2>Skills</h2>
-        <div class="row justify-content-center">
-            <div class="col">
-                <div class="phrog" style="transform: translateX(25px);">
-                    <img src="static/cSharp.png" class="img-fluid">
-                </div>
-            </div>
-            <div class="col">
-                <div class="phrog" style="transform: translateX(25px);">
-                    <img src="static/html.png" class="img-fluid">
-                </div>
-            </div>
-            <div class="col">
-                <div class="phrog" style="transform: translateX(25px);">
-                    <img src="static/html.png" class="img-fluid">
-                </div>
-            </div>
-            <div class="col">
-                <div class="phrog" style="transform: translateX(25px);">
-                    <img src="static/java.png" class="img-fluid">
-                </div>
-            </div>
-            <div class="col">
-                <div class="phrog" style="transform: translateX(25px);">
-                    <img src="static/unity.png" class="img-fluid">
-                </div>
-            </div>
-        </div>
+    <section id="achievements" class="text-center mb-5">
+        <h2>Achievements</h2>
+        <ul class="myUL">
+            <li>
+                <h5>Academic Excellence Awards for Grade 9 and Grade 11</h5>
+            </li>
+            <li>
+                <h5>Zebra Robotics Student Excellence Award</h5>
+            </li>
+            <li>
+                <h5>Participated in <a href="https://hacktheridge.ca/">Hack the Ridge 2025</a></h5>
+            </li>
+            <li>
+                <h5>Participated in <a href="https://itch.io/jam/mini-jame-gam-23">Mini Jame Gam 23</a></h5>
+            </li>
+            <li>
+                <h5>Participated in <a href="https://itch.io/jam/jame-gam-30">Jame Gam 30</a></h5>
+            </li>
+            <li>
+                <h5>Participated in <a href="https://itch.io/jam/jame-gam-29">Jame Gam 29</a></h5>
+            </li>
+        </ul>
     </section>
 
     <section id="contact" class="text-center mb-5">
         <h2>Contact Me</h2>
         <h5>Email: <a href="mailto:jilaniayaan2@gmail.com">jilaniayaan2@gmail.com</a></h5>
-        <h5>
-            GitHub: <a href="https://github.com/jilaniayaan2-netizen">Link</a> |
-            Itch.io: <a href="https://rainy-studios.itch.io/">Link</a>
-        </h5>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('themeToggle').addEventListener('click', () => {
             const html = document.documentElement;
