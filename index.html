@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayaan Jilani | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+
+    <style>
+        html,
+        body {
+            overflow-x: clip;
+            scroll-behavior: smooth;
+        }
+
+        .phrog {
+            border-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACV0lEQVR4Aezay27CMBCFYVqx5JFZ9pG7rNQqWQA+lj2d+Djc/kogjO3J+MtolEp8HvizCgBq5TwcAAXULGAOF1bo8Xz6zbzM+U0PlznbsjZKKASNAjBfCgBaegyPAB0mLANUoEufuH39fH1/ZF63e5/hc+Zsy1o9U8nJY5N6DI+rCh2O+OYBADUXQBr0eD4Vz6VRPkvfeaRXlG/UI6P9adAo4LvPA2quAEDvDar90JzP3cONno8KNd9CQAE1C5jDVRWqPUSfy6Kx7jfnOxxO84vOo/O6XxOqQHUB45wAoDmvcDWgIVFuQRpUe4iOG5e/fK09afb4cuHGB81fx41tza/ToM1ITKwCgK4MvjdAfZZrpOmg2iO1R80e6/XXU098mw46MfeHDA2o+bYACqhZwByOCgXULGAOR4W+Eaj5qPuEo0LNzoACahYwh6NCATULmMNRoYCaBczhqFBAzQLmcFQooGYBc7hXq1AzTz4coHmz7g5Auzz5SUDzZt0dgHZ58pOA5s26OwDt8uQnAc2bdXdMB9XfLulvjWaP9fpdDcPkdFBDjk8VAlDz7QL03qDa87L5aE+bPf5HfsWS0fNRoQXn+ADQccMiAqAFx/igAtUeEvU4XT+e0r4RNP/R81ag+x7n9a4GqPmeAvpooNpzzPlND+fOnwo13zJAATULmMNRodtAm7sAbdJsmwB0m1tzF6BNmm0Tn9H/stvCXndp/OvMPp/c19fnVo1PhZrvK6CAmgXM4aoK1Z4wOtZ8R+Nl98++vsavQHUB45wAoDmvcDWgIVFuwR8AAAD//8dKdCcAAAAGSURBVAMA9XOScqwRo3oAAAAASUVORK5CYII=') 28 / 28px / 0 round;
+            border-width: 28px;
+            border-style: solid;
+            background-color: rgba(0, 128, 0, 0.604);
+            width: 170px;
+            height: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recreational-hobbies">Recreational Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#creative-hobbies">Creative Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <button class="btn btn-sm btn-outline-secondary" id="themeToggle">Dark/Light</button>
+            </div>
+        </div>
+    </nav>
+    <div class="card text-bg-dark mb-3 text-center">
+        <h1>I'm Ayaan, nice to meet you!</h1>
+        <h5 class="lead">C# Developer | Unity Game Programmer | Python Enthusiast</h5>
+    </div>
+
+    <section id="about" class="text-center mb-5">
+        <h2>About Me</h2>
+        <h5>
+            I’m a developer passionate about using technology to tell stories and solve problems. My
+            favorite uses of tech lies in how technology can be used to express one’s creativity.
+        </h5>
+        <h5>
+            When I was younger, my parents placed me into a class for robotics, these classes were
+            something I enjoyed, using simple robotics concepts to solve challenges. Then Covid-19 hit, I couldn’t go to
+            these
+            classes anymore since they were in person, that led me to taking classes in software development. These
+            beginner
+            level coding classes led me to taking a course for Unity, where I learned to make my own games. This is what
+            triggered my love for software development. Since then, I’ve taken a Python course and an AI developer
+            course. Other
+            than taking courses, I’ve pursued learning on my own, like making my own old internet style website using
+            html.
+        </h5>
+    </section>
+
+    <section id="projects" class="container mb-5">
+        <h2 class="text-center">My Projects</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 project-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">Ant Escape</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">C#/Unity</h6>
+                        <img src="antEscape.png" class="img-fluid mb-3" style="max-height:200px;">
+                        <h5 class="card-text">Ant Escape is a top down game, similar to a dungeon crawler. You play as
+                            Fred, an ant who got separated from his colony. To get back to his colony, he has to
+                            complete over 10 levels filled with enemies and even defeat a boss.</h5>
+                        <a href="https://github.com/jilaniayaan2-netizen" class="btn btn-dark btn-sm">View GitHub</a>
+                        <a href="https://rainy-studios.itch.io/ant-escape" class="btn"
+                            style="background-color: #fa5c5c; color: white;">View Itch.io</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 project-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">VR Guy's Bizarre Adventure</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">C#/Unity</h6>
+                        <img src="vrGuy.png" class="img-fluid mb-3" style="max-height:200px;">
+                        <h5 class="card-text">VR Guy’s Bizarre Adventure is one of the first games I made, it's a side
+                            scrolling platform with 10 levels. You can do all the basic movements to pass levels but for
+                            some obstacles, you will need to use VR Guy’s special abilities; invisibility and a sword
+                            attack.</h5>
+                        <a href="https://github.com/jilaniayaan2-netizen/VR-Guy-s-Bizarre-Adventure"
+                            class="btn btn-dark btn-sm">View GitHub</a>
+                        <a href="https://rainy-studios.itch.io/vr-guys-bizzare-adventure" class="btn"
+                            style="background-color: #fa5c5c; color: white;">View Itch.io</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 project-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">Journey of Bean</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">C#/Unity</h6>
+                        <img src="bean.png" class="img-fluid mb-3" style="max-height:200px;">
+                        <h5 class="card-text">Journey of Bean is my first 3D game. In the game you play as a bean and
+                            have to complete a 3D obstacle course without falling or dying. It includes various
+                            obstacles such as cannons, spinners, and platforms.</h5>
+                        <a href="https://github.com/jilaniayaan2-netizen/Journey-of-Bean"
+                            class="btn btn-dark btn-sm">View GitHub</a>
+                        <a href="https://rainy-studios.itch.io/journy-of-bean" class="btn"
+                            style="background-color: #fa5c5c; color: white;">View Itch.io</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recreational-hobbies" class="text-center mb-5">
+        <h2>Recreational Hobbies</h2>
+        <h5>
+            When I want to just lay back and relax, I love to go out into nature. While I'm out
+            there in forest or river, I love to do some hiking, fishing, nature journaling, and finding critters for my
+            <a href="https://www.inaturalist.org/people/6571388">Inaturalist</a>. When I'm not out in nature, I also
+            enjoy reading books.
+        </h5>
+    </section>
+
+    <section id="creative-hobbies" class="text-center mb-5">
+        <h2>Creative Hobbies</h2>
+        <h5>
+            I also love to spend my time in creating things and expressing my creativity through
+            different mediums. My hobbies that I use to express my creativity is sculpting and writing. Below are my 3
+            favorite sculptures that I've made.
+        </h5>
+        <div class="row justify-content-center">
+            <div class="col-4 mb-3">
+                <img src="mimic.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-4 mb-3">
+                <img src="mahoraga.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-4 mb-3">
+                <img src="godzilla.jpg" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="text-center mb-5">
+        <h2>Skills</h2>
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="phrog" style="transform: translateX(25px);">
+                    <img src="cSharp.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="col">
+                <div class="phrog" style="transform: translateX(25px);">
+                    <img src="html.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="col">
+                <div class="phrog" style="transform: translateX(25px);">
+                    <img src="python.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="col">
+                <div class="phrog" style="transform: translateX(25px);">
+                    <img src="java.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="col">
+                <div class="phrog" style="transform: translateX(25px);">
+                    <img src="unity.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="text-center mb-5">
+        <h2>Contact Me</h2>
+        <h5>Email: <a href="mailto:jilaniayaan2@gmail.com">jilaniayaan2@gmail.com</a></h5>
+        <h5>
+            GitHub: <a href="https://github.com/jilaniayaan2-netizen">Link</a> |
+            Itch.io: <a href="https://rainy-studios.itch.io/">Link</a>
+        </h5>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            const html = document.documentElement;
+            html.setAttribute(
+                'data-bs-theme',
+                html.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark'
+            );
+        });
+    </script>
+
+</body>
+
+</html>
