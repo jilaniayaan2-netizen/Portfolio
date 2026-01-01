@@ -1,147 +1,208 @@
-/* =========
-   Global
-   ========= */
-:root{
-  --radius-lg: 18px;
-  --radius-md: 14px;
-  --shadow: 0 14px 40px rgba(0,0,0,.28);
-  --border: rgba(255,255,255,.14);
-  --bg-card: rgba(255,255,255,.06);
-  --bg-card-2: rgba(255,255,255,.09);
+/* =========================================================
+   Ayaan Portfolio - Professional CSS (Bootstrap-friendly)
+   Works with: tags, project-card, skill-tile, hero-surface,
+   section spacing, muted text, gallery.
+   ========================================================= */
+
+/* ---------- Base / Tokens ---------- */
+:root {
+    --radius-lg: 18px;
+    --radius-md: 14px;
+
+    --border: rgba(255, 255, 255, .14);
+    --border-strong: rgba(255, 255, 255, .22);
+
+    --card: rgba(255, 255, 255, .06);
+    --card-hover: rgba(255, 255, 255, .09);
+
+    --shadow: 0 14px 40px rgba(0, 0, 0, .28);
+
+    --text-muted: rgba(255, 255, 255, .82);
+
+    --itch: #fa5c5c;
 }
 
-html, body{
-  overflow-x: hidden;
+/* Light theme tuning (Bootstrap sets background, we refine cards/borders) */
+html[data-bs-theme="light"] {
+    --border: rgba(0, 0, 0, .12);
+    --border-strong: rgba(0, 0, 0, .18);
+
+    --card: rgba(0, 0, 0, .04);
+    --card-hover: rgba(0, 0, 0, .06);
+
+    --shadow: 0 14px 40px rgba(0, 0, 0, .14);
+
+    --text-muted: rgba(0, 0, 0, .70);
 }
 
-/* Smooth section spacing */
-.section{
-  padding: 64px 0;
+/* ---------- Global ---------- */
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-/* =========
-   Navbar
-   ========= */
-.navbar{
-  backdrop-filter: blur(10px);
-}
-.navbar .nav-link{
-  opacity: .9;
-}
-.navbar .nav-link:hover{
-  opacity: 1;
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* =========
-   Hero / Cards look
-   ========= */
-.card,
-.project-card{
-  border-radius: var(--radius-lg) !important;
-  box-shadow: var(--shadow);
+/* Section spacing */
+.section {
+    padding: 64px 0;
 }
 
-/* Make your top hero block look premium (if you keep using a card) */
-.hero-surface{
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+/* Text helpers */
+.muted {
+    opacity: .90;
+    /* keep readable */
+    color: var(--text-muted);
 }
 
-/* =========
-   Project cards
-   ========= */
-.project-card{
-  background: var(--bg-card);
-  border: 1px solid var(--border) !important;
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
-}
-.project-card:hover{
-  transform: translateY(-3px);
-  background: var(--bg-card-2);
-  border-color: rgba(255,255,255,.22) !important;
+p,
+li {
+    line-height: 1.65;
 }
 
-.project-card img{
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255,255,255,.12);
+/* ---------- Navbar ---------- */
+.navbar {
+    backdrop-filter: blur(10px);
 }
 
-/* =========
-   Buttons
-   ========= */
-.btn{
-  border-radius: 999px;
-}
-.btn-itch{
-  background-color: #fa5c5c;
-  border-color: #fa5c5c;
-  color: #fff;
-}
-.btn-itch:hover{
-  filter: brightness(.95);
-  color: #fff;
+.navbar .nav-link {
+    opacity: .9;
 }
 
-/* =========
-   Skill tiles
-   ========= */
-.skill-tile{
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  border-radius: var(--radius-md);
-  padding: 14px 12px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
-}
-.skill-tile:hover{
-  transform: translateY(-2px);
-  background: var(--bg-card-2);
-  border-color: rgba(255,255,255,.22);
-}
-.skill-tile img{
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
+.navbar .nav-link:hover {
+    opacity: 1;
 }
 
-/* =========
-   Image gallery
-   ========= */
-.gallery img{
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255,255,255,.12);
-  transition: transform .15s ease;
-}
-.gallery img:hover{
-  transform: scale(1.02);
+/* ---------- Buttons ---------- */
+.btn {
+    border-radius: 999px !important;
 }
 
-/* =========
-   Typography improvements
-   ========= */
-h1, h2, h3{
-  letter-spacing: .2px;
-}
-p, li{
-  line-height: 1.6;
-}
-.muted{
-  opacity: .85;
+/* Itch button */
+.btn-itch {
+    background-color: var(--itch) !important;
+    border-color: var(--itch) !important;
+    color: #fff !important;
 }
 
-/* =========
-   Reduce excessive spacing on small screens
-   ========= */
-@media (max-width: 576px){
-  .section{ padding: 44px 0; }
+.btn-itch:hover {
+    filter: brightness(.95);
+}
+
+/* ---------- Hero surfaces / content blocks ---------- */
+.hero-surface {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+}
+
+/* ---------- Project cards ---------- */
+.project-card {
+    border-radius: var(--radius-lg) !important;
+    background: var(--card) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: var(--shadow);
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    background: var(--card-hover) !important;
+    border-color: var(--border-strong) !important;
+}
+
+/* Uniform image look */
+.project-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+/* ---------- Tags (chips) ---------- */
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    font-size: .9rem;
+    margin: 4px 6px 0 0;
+    user-select: none;
+}
+
+/* ---------- Skills tiles ---------- */
+.skill-tile {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: var(--radius-md);
+    padding: 14px 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .18);
+}
+
+html[data-bs-theme="light"] .skill-tile {
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .08);
+}
+
+.skill-tile:hover {
+    transform: translateY(-2px);
+    background: var(--card-hover);
+    border-color: var(--border-strong);
+}
+
+.skill-tile img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+/* ---------- Gallery images ---------- */
+.gallery img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    transition: transform .15s ease, filter .15s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+/* ---------- Links ---------- */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Footer small text ---------- */
+.small {
+    opacity: .85;
+}
+
+/* ---------- Mobile adjustments ---------- */
+@media (max-width: 576px) {
+    .section {
+        padding: 44px 0;
+    }
+
+    .project-card:hover {
+        transform: none;
+        /* reduce jump on small screens */
+    }
 }
