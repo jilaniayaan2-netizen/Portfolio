@@ -2,266 +2,437 @@
 <html lang="en" data-bs-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ayaan Jilani | Portfolio</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css">
 
     <style>
         html,
         body {
-            overflow-x: clip;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
-        .phrog {
-            border-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACV0lEQVR4Aezay27CMBCFYVqx5JFZ9pG7rNQqWQA+lj2d+Djc/kogjO3J+MtolEp8HvizCgBq5TwcAAXULGAOF1bo8Xz6zbzM+U0PlznbsjZKKASNAjBfCgBaegyPAB0mLANUoEufuH39fH1/ZF63e5/hc+Zsy1o9U8nJY5N6DI+rCh2O+OYBADUXQBr0eD4Vz6VRPkvfeaRXlG/UI6P9adAo4LvPA2quAEDvDar90JzP3cONno8KNd9CQAE1C5jDVRWqPUSfy6Kx7jfnOxxO84vOo/O6XxOqQHUB45wAoDmvcDWgIVFuQRpUe4iOG5e/fK09afb4cuHGB81fx41tza/ToM1ITKwCgK4MvjdAfZZrpOmg2iO1R80e6/XXU098mw46MfeHDA2o+bYACqhZwByOCgXULGAOR4W+Eaj5qPuEo0LNzoACahYwh6NCATULmMNRoYCaBczhqFBAzQLmcFQooGYBc7hXq1AzTz4coHmz7g5Auzz5SUDzZt0dgHZ58pOA5s26OwDt8uQnAc2bdXdMB9XfLulvjWaP9fpdDcPkdFBDjk8VAlDz7QL03qDa87L5aE+bPf5HfsWS0fNRoQXn+ADQccMiAqAFx/igAtUeEvU4XT+e0r4RNP/R81ag+x7n9a4GqPmeAvpooNpzzPlND+fOnwo13zJAATULmMNRodtAm7sAbdJsmwB0m1tzF6BNmm0Tn9H/stvCXndp/OvMPp/c19fnVo1PhZrvK6CAmgXM4aoK1Z4wOtZ8R+Nl98++vsavQHUB45wAoDmvcDWgIVFuwR8AAAD//8dKdCcAAAAGSURBVAMA9XOScqwRo3oAAAAASUVORK5CYII=') 28 / 28px / 0 round;
-            border-width: 28px;
-            border-style: solid;
-            background-color: rgba(0, 128, 0, 0.604);
-            width: 170px;
-            height: 170px;
+        .section {
+            padding: 64px 0;
+        }
+
+        .hero {
+            padding: 72px 0 56px;
+        }
+
+        .muted {
+            opacity: .85;
+        }
+
+        .project-card img {
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, .12);
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: rgba(255, 255, 255, .06);
+            font-size: .9rem;
+            margin: 4px 6px 0 0;
+        }
+
+        .skill-tile {
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: rgba(255, 255, 255, .06);
+            border-radius: 16px;
+            padding: 14px 12px;
+            height: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 12px;
         }
 
-        ul.myUL {
-            display: inline-block;
-            text-align: left;
+        .skill-tile img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+        }
+
+        .gallery img {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        .btn-itch {
+            background-color: #fa5c5c;
+            border-color: #fa5c5c;
+            color: #fff;
+        }
+
+        .btn-itch:hover {
+            filter: brightness(0.95);
+            color: #fff;
+        }
+
+        .nav-link {
+            opacity: .9;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-        <div class="container-fluid">
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="#">Ayaan Jilani</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Technical Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#creative-hobbies">Creative Hobbies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#recreational-hobbies">Recreational Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-                <button class="btn btn-sm btn-outline-secondary" id="themeToggle">Dark/Light</button>
+
+                <div class="d-flex gap-2 align-items-center">
+                    <a class="btn btn-sm btn-outline-secondary" href="https://github.com/jilaniayaan2-netizen"
+                        target="_blank" rel="noreferrer">GitHub</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="https://rainy-studios.itch.io/" target="_blank"
+                        rel="noreferrer">Itch.io</a>
+                    <button class="btn btn-sm btn-outline-secondary" id="themeToggle">Dark/Light</button>
+                </div>
             </div>
         </div>
     </nav>
-    <div class="card text-bg-dark mb-3 text-center">
-        <h1>Hi, I'm Ayaan, a Technology Enthusiast</h1>
-        <h5 class="lead">C# Developer | Unity Game Programmer | Python Enthusiast</h5>
-        <h5>
-            GitHub: <a href="https://github.com/jilaniayaan2-netizen">Link</a> |
-            Itch.io: <a href="https://rainy-studios.itch.io/">Link</a>
-        </h5>
-    </div>
 
-    <section id="about" class="text-center mb-5">
-        <h2>About Me</h2>
-        <h5>
-            I’m a developer passionate about using technology to tell stories and solve problems. My
-            favorite uses of technology lies in how technology can be used to solve real world problems and automate
-            tasks. I started taking Robotics Classes ever since I was in grade 4, during the last few years, my passion
-            for
-            technology has grown and I have gained experiance in Robotics, Automation, Game Development, and Application
-            Development. I've gain expertise in using languages like Python, Java, HTML, and C# along with learning how
-            to use tools such as Unity, Bootstrap, Jupyter Notebook, and Flask.
-        </h5>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-2">Hi, I’m Ayaan — Technology Enthusiast</h1>
+                    <p class="lead muted mb-3">
+                        C# Developer • Unity Game Programmer • Python Enthusiast
+                    </p>
+                    <p class="muted mb-4">
+                        I build games and small apps, explore automation, and love using technology to tell stories and
+                        solve problems.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <!-- Optional: add resume.pdf in repo root or static/ and update link -->
+                        <!-- <a class="btn btn-primary" href="static/resume.pdf" target="_blank">Resume (PDF)</a> -->
+                        <a class="btn btn-primary" href="#projects">View Projects</a>
+                        <a class="btn btn-outline-secondary" href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 rounded-4 border"
+                        style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12) !important;">
+                        <div class="fw-semibold mb-2">Quick Info</div>
+                        <div class="small muted">
+                            Interested in: Game Dev, Robotics, Automation<br />
+                            Tools: Unity, Bootstrap, Jupyter, Flask
+                        </div>
+                        <hr class="my-3 opacity-25" />
+                        <div class="small muted">
+                            Live demos: Itch.io • Code: GitHub
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="fw-bold mb-3">About Me</h2>
+                    <p class="muted mb-3">
+                        I’m a developer passionate about using technology to tell stories and solve problems.
+                        I enjoy using tech to automate tasks and build projects that help people.
+                    </p>
+                    <ul class="muted">
+                        <li>Started robotics classes in Grade 4</li>
+                        <li>Experience in Robotics, Automation, Game Development, and Application Development</li>
+                        <li>Languages: Python, Java, HTML, C# • Tools: Unity, Bootstrap, Jupyter Notebook, Flask</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects" class="container mb-5">
-        <h2 class="text-center">My Projects</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 project-card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title text-primary">Ant Escape</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">C#/Unity</h6>
-                        <img src="static/antEscape.png" class="img-fluid mb-3" style="max-height:200px;">
-                        <h5 class="card-text">Ant Escape is a top down game, similar to a dungeon crawler. You play as
-                            Fred, an ant who got separated from his colony. To get back to his colony, he has to
-                            complete over 10 levels filled with enemies and even defeat a boss.</h5>
-                        <a href="https://github.com/jilaniayaan2-netizen/Ant-Escape" class="btn btn-dark btn-sm">View
-                            GitHub</a>
-                        <a href="https://rainy-studios.itch.io/ant-escape" class="btn"
-                            style="background-color: #fa5c5c; color: white;">View Itch.io</a>
+    <!-- PROJECTS -->
+    <section id="projects" class="section pt-0">
+        <div class="container">
+            <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+                <div>
+                    <h2 class="fw-bold mb-1">Projects</h2>
+                    <p class="muted mb-0">Games and apps I’ve built — with code and demos.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Ant Escape -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 project-card border-0" style="background: rgba(255,255,255,.06);">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold mb-1">Ant Escape</h5>
+                            <div class="mb-2">
+                                <span class="tag">Unity</span><span class="tag">C#</span><span
+                                    class="tag">Top-down</span>
+                            </div>
+                            <img src="static/antEscape.png" class="w-100 mb-3" alt="Ant Escape screenshot">
+                            <p class="muted">
+                                A top-down dungeon-crawler style game. You play as Fred, an ant separated from his
+                                colony,
+                                and complete 10+ levels with enemies and a boss.
+                            </p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://github.com/jilaniayaan2-netizen/Ant-Escape"
+                                    class="btn btn-sm btn-outline-secondary" target="_blank" rel="noreferrer">GitHub</a>
+                                <a href="https://rainy-studios.itch.io/ant-escape" class="btn btn-sm btn-itch"
+                                    target="_blank" rel="noreferrer">Itch.io</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VR Guy -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 project-card border-0" style="background: rgba(255,255,255,.06);">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold mb-1">VR Guy’s Bizarre Adventure</h5>
+                            <div class="mb-2">
+                                <span class="tag">Unity</span><span class="tag">C#</span><span
+                                    class="tag">Platformer</span>
+                            </div>
+                            <img src="static/vrGuy.png" class="w-100 mb-3" alt="VR Guy screenshot">
+                            <p class="muted">
+                                One of my first games — a side-scrolling platformer with 10 levels.
+                                Use special abilities like invisibility and a sword attack to pass obstacles.
+                            </p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://github.com/jilaniayaan2-netizen/VR-Guy-s-Bizarre-Adventure"
+                                    class="btn btn-sm btn-outline-secondary" target="_blank" rel="noreferrer">GitHub</a>
+                                <a href="https://rainy-studios.itch.io/vr-guys-bizzare-adventure"
+                                    class="btn btn-sm btn-itch" target="_blank" rel="noreferrer">Itch.io</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journey of Bean -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 project-card border-0" style="background: rgba(255,255,255,.06);">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold mb-1">Journey of Bean</h5>
+                            <div class="mb-2">
+                                <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">3D</span>
+                            </div>
+                            <img src="static/bean.png" class="w-100 mb-3" alt="Journey of Bean screenshot">
+                            <p class="muted">
+                                My first 3D game — complete an obstacle course without falling.
+                                Includes cannons, spinners, and moving platforms.
+                            </p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://github.com/jilaniayaan2-netizen/Journey-of-Bean"
+                                    class="btn btn-sm btn-outline-secondary" target="_blank" rel="noreferrer">GitHub</a>
+                                <a href="https://rainy-studios.itch.io/journy-of-bean" class="btn btn-sm btn-itch"
+                                    target="_blank" rel="noreferrer">Itch.io</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 project-card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title text-primary">VR Guy's Bizarre Adventure</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">C#/Unity</h6>
-                        <img src="static/vrGuy.png" class="img-fluid mb-3" style="max-height:200px;">
-                        <h5 class="card-text">VR Guy’s Bizarre Adventure is one of the first games I made, it's a side
-                            scrolling platform with 10 levels. You can do all the basic movements to pass levels but for
-                            some obstacles, you will need to use VR Guy’s special abilities; invisibility and a sword
-                            attack.</h5>
-                        <a href="https://github.com/jilaniayaan2-netizen/VR-Guy-s-Bizarre-Adventure"
-                            class="btn btn-dark btn-sm">View GitHub</a>
-                        <a href="https://rainy-studios.itch.io/vr-guys-bizzare-adventure" class="btn"
-                            style="background-color: #fa5c5c; color: white;">View Itch.io</a>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Technical Skills</h2>
+            <p class="muted mb-4">Tools and languages I use for projects.</p>
+
+            <div class="row g-3">
+                <!-- Languages -->
+                <div class="col-12">
+                    <div class="fw-semibold mb-2">Languages</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-tile">
+                        <img src="static/cSharp.png" alt="C#">
+                        <div>C#</div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 project-card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title text-primary">Journey of Bean</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">C#/Unity</h6>
-                        <img src="static/bean.png" class="img-fluid mb-3" style="max-height:200px;">
-                        <h5 class="card-text">Journey of Bean is my first 3D game. In the game you play as a bean and
-                            have to complete a 3D obstacle course without falling or dying. It includes various
-                            obstacles such as cannons, spinners, and platforms.</h5>
-                        <a href="https://github.com/jilaniayaan2-netizen/Journey-of-Bean"
-                            class="btn btn-dark btn-sm">View GitHub</a>
-                        <a href="https://rainy-studios.itch.io/journy-of-bean" class="btn"
-                            style="background-color: #fa5c5c; color: white;">View Itch.io</a>
+                <div class="col-6 col-md-3">
+                    <div class="skill-tile">
+                        <img src="static/python.png" alt="Python">
+                        <div>Python</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-tile">
+                        <img src="static/html.png" alt="HTML">
+                        <div>HTML/CSS</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-tile">
+                        <img src="static/java.png" alt="Java">
+                        <div>Java</div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="col-12 mt-3">
+                    <div class="fw-semibold mb-2">Tools</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-tile">
+                        <img src="static/unity.png" alt="Unity">
+                        <div>Unity</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-tile">
+                        <img src="static/Bootstrap.png" alt="Bootstrap">
+                        <div>Bootstrap</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-tile">
+                        <img src="static/Flask.png" alt="Flask">
+                        <div>Flask</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="skill-tile">
+                        <img src="static/Jupyter_logo.png" alt="Jupyter">
+                        <div>Jupyter</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="text-center mb-5">
-        <h2>Technical Skills</h2>
-        <div class="row justify-content-center">
-            <div class="row" style="padding-top: 25px;">
-                <div class="col">
-                    <div class="phrog" style="transform: translateX(50px);">
-                        <img src="static/cSharp.png" class="img-fluid">
+    <!-- HOBBIES (compressed to look cleaner) -->
+    <section class="section pt-0">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Beyond Coding</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="p-4 rounded-4 border h-100"
+                        style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12) !important;">
+                        <h5 class="fw-semibold mb-2">Creative Hobbies</h5>
+                        <ul class="muted mb-0">
+                            <li>Storytelling / writing — I write stories and share them with friends</li>
+                            <li>Clay sculpting — I make desk figurines inspired by imagination and TV shows</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="phrog" style="transform: translateX(50px);">
-                        <img src="static/python.png" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="phrog" style="transform: translateX(50px);">
-                        <img src="static/html.png" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="phrog" style="transform: translateX(50px);">
-                        <img src="static/java.png" class="img-fluid">
+                <div class="col-lg-6">
+                    <div class="p-4 rounded-4 border h-100"
+                        style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12) !important;">
+                        <h5 class="fw-semibold mb-2">Recreational Hobbies</h5>
+                        <p class="muted mb-0">
+                            I love being outdoors — hiking, fishing, nature journaling, and finding critters for my
+                            <a href="https://www.inaturalist.org/people/6571388" target="_blank"
+                                rel="noreferrer">iNaturalist</a>.
+                            When I’m not outside, I enjoy reading books.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="row" style="padding-top: 25px;">
-                <div class="col">
-                    <div class="phrog" style="transform: translateX(50px);">
-                        <img src="static/unity.png" class="img-fluid">
-                    </div>
+
+            <div class="row g-3 mt-2 gallery">
+                <div class="col-6 col-md-3"><img src="static/mimic.jpg" class="img-fluid rounded-4" alt="Clay sculpt">
                 </div>
-                <div class="col">
-                    <div class="phrog" style="transform: translateX(50px);">
-                        <img src="static/Bootstrap.png" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="phrog" style="transform: translateX(50px);">
-                        <img src="static/Flask.png" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="phrog" style="transform: translateX(50px);">
-                        <img src="static/Jupyter_logo.png" class="img-fluid">
-                    </div>
-                </div>
+                <div class="col-6 col-md-3"><img src="static/mahoraga.jpg" class="img-fluid rounded-4"
+                        alt="Clay sculpt"></div>
+                <div class="col-6 col-md-3"><img src="static/biolante.jpg" class="img-fluid rounded-4"
+                        alt="Clay sculpt"></div>
+                <div class="col-6 col-md-3"><img src="static/demogorgan.jpg" class="img-fluid rounded-4"
+                        alt="Clay sculpt"></div>
             </div>
         </div>
     </section>
 
-    <section id="creative-hobbies" class="text-center mb-5">
-        <h2>Creative Hobbies</h2>
-        <h3 style="text-align: left;">Storytelling/writing</h3>
-        <ul>
-            <h5 style="text-align: left;">
-                <li>I like to write stories and share them with my group of friends</li>
-            </h5>
-        </ul>
-        <h3 style="text-align: left;">Clay Sculpting</h3>
-        <ul>
-            <h5 style="text-align: left;">
-                <li>I like sculpting figurines for my desk, I take inspiration from my imagination and tv shows</li>
-            </h5>
-        </ul>
-        <div class="row justify-content-center">
-            <div class="col">
-                <img src="static/mimic.jpg" class="img-fluid rounded">
-            </div>
-            <div class="col">
-                <img src="static/mahoraga.jpg" class="img-fluid rounded">
-            </div>
-            <div class="col">
-                <img src="static/biolante.jpg" class="img-fluid rounded">
-            </div>
-            <div class="col">
-                <img src="static/demogorgan.jpg" class="img-fluid rounded">
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Achievements</h2>
+            <div class="p-4 rounded-4 border"
+                style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12) !important;">
+                <ul class="muted mb-0">
+                    <li>Academic Excellence Awards for Grade 9 and Grade 11</li>
+                    <li>Zebra Robotics Student Excellence Award</li>
+                    <li>Participated in <a href="https://hacktheridge.ca/" target="_blank" rel="noreferrer">Hack the
+                            Ridge 2025</a></li>
+                    <li>Participated in <a href="https://itch.io/jam/mini-jame-gam-23" target="_blank"
+                            rel="noreferrer">Mini Jame Gam 23</a></li>
+                    <li>Participated in <a href="https://itch.io/jam/jame-gam-30" target="_blank" rel="noreferrer">Jame
+                            Gam 30</a></li>
+                    <li>Participated in <a href="https://itch.io/jam/jame-gam-29" target="_blank" rel="noreferrer">Jame
+                            Gam 29</a></li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="recreational-hobbies" class="text-center mb-5">
-        <h2>Recreational Hobbies</h2>
-        <h5>
-            When I want to just lay back and relax, I love to go out into nature. While I'm out
-            there in forest or river, I love to do some hiking, fishing, nature journaling, and finding critters for my
-            <a href="https://www.inaturalist.org/people/6571388">Inaturalist</a>. When I'm not out in nature, I also
-            enjoy reading books.
-        </h5>
-    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="section pt-0">
+        <div class="container">
+            <div class="p-4 rounded-4 border"
+                style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12) !important;">
+                <h2 class="fw-bold mb-2">Contact</h2>
+                <p class="muted mb-3">Best way to reach me:</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-outline-secondary" href="mailto:jilaniayaan2@gmail.com">Email</a>
+                    <a class="btn btn-outline-secondary" href="https://github.com/jilaniayaan2-netizen" target="_blank"
+                        rel="noreferrer">GitHub</a>
+                    <a class="btn btn-outline-secondary" href="https://rainy-studios.itch.io/" target="_blank"
+                        rel="noreferrer">Itch.io</a>
+                    <!-- Add LinkedIn when ready -->
+                    <!-- <a class="btn btn-outline-secondary" href="https://linkedin.com/in/xxxxx" target="_blank" rel="noreferrer">LinkedIn</a> -->
+                </div>
+            </div>
 
-    <section id="achievements" class="text-center mb-5">
-        <h2>Achievements</h2>
-        <ul class="myUL">
-            <li>
-                <h5>Academic Excellence Awards for Grade 9 and Grade 11</h5>
-            </li>
-            <li>
-                <h5>Zebra Robotics Student Excellence Award</h5>
-            </li>
-            <li>
-                <h5>Participated in <a href="https://hacktheridge.ca/">Hack the Ridge 2025</a></h5>
-            </li>
-            <li>
-                <h5>Participated in <a href="https://itch.io/jam/mini-jame-gam-23">Mini Jame Gam 23</a></h5>
-            </li>
-            <li>
-                <h5>Participated in <a href="https://itch.io/jam/jame-gam-30">Jame Gam 30</a></h5>
-            </li>
-            <li>
-                <h5>Participated in <a href="https://itch.io/jam/jame-gam-29">Jame Gam 29</a></h5>
-            </li>
-        </ul>
-    </section>
-
-    <section id="contact" class="text-center mb-5">
-        <h2>Contact Me</h2>
-        <h5>Email: <a href="mailto:jilaniayaan2@gmail.com">jilaniayaan2@gmail.com</a></h5>
+            <div class="text-center small muted mt-4">
+                © <span id="year"></span> Ayaan Jilani
+            </div>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('themeToggle').addEventListener('click', () => {
             const html = document.documentElement;
-            html.setAttribute(
-                'data-bs-theme',
+            html.setAttribute('data-bs-theme',
                 html.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark'
             );
         });
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-
 </body>
 
 </html>
